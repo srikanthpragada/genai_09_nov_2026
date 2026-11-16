@@ -1,0 +1,77 @@
+# Libraries required for our applications 
+# pip install --upgrade  -r requirements.txt
+
+
+# ==========================================
+# Python: 3.13
+# Core AI / LangChain
+# ==========================================
+langchain
+langchain-core
+langgraph
+langchain-text-splitters
+
+# ==========================================
+# OpenAI GPT
+# ==========================================
+langchain-openai
+openai
+
+# ==========================================
+# Google Gemini
+# ==========================================
+langchain-google-genai
+google-genai
+
+# ==========================================
+# GROQ
+# ==========================================
+langchain-groq
+
+# ==========================================
+# Local LLM / Ollama
+# ==========================================
+langchain-ollama
+
+# ==========================================
+# Hugging Face integrations
+# ==========================================
+langchain-huggingface
+huggingface_hub
+transformers
+sentence-transformers
+sentencepiece
+
+# ==========================================
+# Vector databases / RAG
+# ==========================================
+langchain-chroma
+chromadb
+faiss-cpu
+
+# ==========================================
+# MCP servers and clients
+# ==========================================
+mcp>=1.28,<2
+fastmcp==3.4.5
+langchain-mcp-adapters==0.3.2
+
+
+# ==========================================
+# Web applications
+# ==========================================
+streamlit
+
+# ==========================================
+# Document processing
+# ==========================================
+pypdf
+beautifulsoup4
+
+# ==========================================
+# HTTP / configuration
+# ==========================================
+requests
+httpx
+python-dotenv
+pydantic
