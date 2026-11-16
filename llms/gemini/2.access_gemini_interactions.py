@@ -8,7 +8,7 @@ from google import genai
 client = genai.Client()
 
 response = client.interactions.create(
-    model="gemini-2.5-flash",
+    model="gemini-3.5-flash-lite",
     input="What is the capital of Spain?"
 )
 
