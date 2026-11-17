@@ -3,7 +3,7 @@
 from langchain.chat_models import init_chat_model
 from langchain.messages import SystemMessage, HumanMessage
 
-model = init_chat_model("gemini-3.1-flash-lite", model_provider="google_genai")
+model = init_chat_model("gemini-3.5-flash-lite", model_provider="google_genai")
 
 messages = [SystemMessage(content="Give one line answer")]
 
@@ -21,7 +21,7 @@ while True:
     # messages.append( {"role" : "user", "content" : prompt})
     messages.append(HumanMessage(content=prompt))
     response = model.invoke(messages)
-    print(response.content)
+    print(response.content[0])
     print('-' * 50)
     print(f'Total Tokens : {response.usage_metadata["total_tokens"]}')
    

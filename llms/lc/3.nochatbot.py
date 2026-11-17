@@ -2,13 +2,8 @@
 
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import SystemMessage, HumanMessage
-from google.genai.types import AutomaticFunctionCallingConfig
 
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
-
-# To supress warning from google SDK
-model = model.bind(automatic_function_calling=AutomaticFunctionCallingConfig(disable=True))
-
 
 while True:
     prompt = input("Enter prompt [q to quit] :")
