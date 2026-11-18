@@ -1,5 +1,3 @@
-## Set environment variable - HF_TOKEN - to access token 
-
 from huggingface_hub import InferenceClient
 import keys 
 
