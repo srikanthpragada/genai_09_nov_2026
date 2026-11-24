@@ -7,7 +7,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 
-loader = PyPDFLoader("../docs/courses_offered.pdf", mode='page')
+loader = PyPDFLoader("./docs/courses_offered.pdf", mode='page')
 docs = loader.load()
 print("Loaded documents", len(docs))
 

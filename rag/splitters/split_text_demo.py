@@ -1,5 +1,8 @@
 # Load document from Text File
 
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from langchain_community.document_loaders.text import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -12,7 +15,7 @@ print("First Document Size : ", len(docs[0].page_content))
 
 text_splitter = RecursiveCharacterTextSplitter(
       chunk_size=500,
-      chunk_overlap=100)
+      chunk_overlap=50)
 
 chunks = text_splitter.split_text(docs[0].page_content)
 

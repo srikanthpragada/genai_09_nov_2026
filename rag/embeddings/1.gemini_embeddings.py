@@ -1,5 +1,4 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_core.documents import Document
 
 embeddings_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
 
