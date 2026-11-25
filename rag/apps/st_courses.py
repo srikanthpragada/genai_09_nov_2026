@@ -12,7 +12,7 @@ import os
 # Embeddings model and LLM 
 embeddings_model = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001")
-llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
+llm = init_chat_model("gemini-3.5-flash-lite", model_provider="google_genai")
 
 
 folder_path = "./courses_vectors"
@@ -40,7 +40,7 @@ else:
 prompt_template = """:
 Consider the following context and give a short answer for the given question.
 Context : {context}
-Question:{question}
+Question: {question}
 """
 
 prompt = PromptTemplate.from_template(prompt_template)
@@ -55,6 +55,6 @@ if len(query) > 0:
     matching_docs_str = "\n".join([doc.page_content for doc in results])
     final_prompt = prompt.format(context=matching_docs_str, question=query)
     result =  llm.invoke(final_prompt)
-    st.write(result.content)
+    st.write(result.content[0]['text'])
 
     
